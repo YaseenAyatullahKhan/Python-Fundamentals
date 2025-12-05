@@ -1,6 +1,6 @@
 SYMBOLS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
 
-print('CAESAR SHIFT DECRYTION')
+print('CAESAR SHIFT DECRYPTION')
 
 print('ENTER THE CODE YOU WANT TO DECRYPT, (USE CAPITAL LETERS)')
 
@@ -11,11 +11,12 @@ for key in range(1,26):
 
     for letter in code:
         if letter in SYMBOLS:
-            num=SYMBOLS.find(letter)
-            num = num-key
-        if num<0:
-            num = num+26
+            num = SYMBOLS.find(letter)
+            num = num - key
+        if num < 0:
+            num = num + 26
 
         translated = translated + SYMBOLS[num]
+
 
     print(key, translated)
